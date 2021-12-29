@@ -29,9 +29,16 @@ function agregarEventListeners() {
             if(ope.innerHTML == '='){
                 ope.addEventListener('click' , ()=>{
                 if(valorActualTexto!="" && valorAnteriorTexto != ""){
-                    console.log(valorActualTexto)
-                    resultado.innerHTML = calcular(valorAnteriorNum , parseFloat(valorActualTexto))
-                }else{
+                    if(resultado.innerHTML =="") {
+                        resultado.innerHTML = calcular(valorAnteriorNum , parseFloat(valorActualTexto));
+                    }
+                    else{
+                        console.log("a")
+                        resultado.innerHTML = calcular(parseFloat(resultado.innerHTML) , parseFloat(valorActualTexto));
+                    }
+                }
+                
+                else{
                     resultado.innerHTML = valorActualTexto
                 }
                 });
