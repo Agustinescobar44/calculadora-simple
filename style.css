@@ -10,52 +10,76 @@ html {
 body{
     background-image: url("mesa.jpg");
     background-size: cover;
-}
-.contenedor{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.calculadora{
     display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.calculadora{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: #6F6F6F;
-    grid-template-columns: repeat(4,75px);
-    grid-template-rows: 160px  repeat(5,75px);
+
+    
+
     padding: 30px;
     border-radius: 32px;
     border: 5px solid rgba(0,0,0,0.57);
+
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);    
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);  
+
+    height: 80%;
+    min-width: 75vw;
 }
-button{
+
+@media (min-width: 768px) { 
+    .calculadora{min-width: 30vw;}
+}
+.botones{
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+}
+.botones button{
     cursor: pointer;
     margin: 5px;
     padding: 0;
     border-radius: 32px;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: 700;
     box-shadow: 8px 10px 15px -5px rgba(0,0,0,1);
 }
 .display{
-    display: grid;
-    gap: 10px;
-    align-items: flex-end;
-    justify-content: center;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     padding: 20px;
-    grid-column: span 4;
     background-color: white;
     border-radius: 20px;
     border: 5px solid rgb(0,0,0);
-    
+    width: 100%;
+    height: fit-content;
 }
 .display div{
     font-size: 35px;
     text-align: end;
 }
+.display .operadores{
+    display: flex;
+    justify-content: space-evenly;
+}
 #valor-resultado{
     color: green;
-    grid-column: span 3;
+    background-color: #d9f99d ;
+    text-align: center;
 }
 
 .col-2{

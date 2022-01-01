@@ -11,16 +11,18 @@
 </head>
 <body>
 
-    <div class="contenedor">
         <div class="calculadora">
 
             <div class="display">
-                <div id="valor-anterior"></div>
-                <div id="valor-operador"></div>
-                <div id="valor-actual"> </div>
+                <div class="operadores">
+                    <div id="valor-anterior"></div>
+                    <div id="valor-operador"></div>
+                    <div id="valor-actual"> </div>
+                </div>
                 <div id="valor-resultado"> </div>
 
             </div>
+            <div class="botones">
                 <button class="col-2 reiniciar">C</button>
                 <button class="borrar">&larr;</button>
                 <button class="operador">/</button>
@@ -39,9 +41,9 @@
                 <button class="numero">0</button>
                 <button class="numero">.</button>
                 <button class="operador col-2">=</button>
+            </div>
         </div>
 
         <script src="app.js"></script>
-    </div>
 </body>
 </html>
