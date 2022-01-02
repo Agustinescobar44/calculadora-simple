@@ -53,6 +53,10 @@ body{
     font-size: 30px;
     font-weight: 700;
     box-shadow: 8px 10px 15px -5px rgba(0,0,0,1);
+    background-color: #d4d4d4 ;
+}
+.botones button:active{
+    background-color: #737373 ;
 }
 .display{
     flex: 1;
